@@ -1,5 +1,6 @@
 # adventofcode2022
 
+```
          * 
         /|\                  
        /*|O\
@@ -11,7 +12,8 @@
  /X/O/*/X|O\X\*\O\
 /O/X/*/O/|\X\*\O\X\
         |X|      
-        |X|    
+        |X|
+```
 
 Answers in Ruby for Advent of Code 2022. Likely won't finish all 25 due to celebrating the holidays, but I like doing as many as I can in the first part of the month
 
