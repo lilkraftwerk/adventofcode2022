@@ -27,11 +27,9 @@ def process_monkey(monkey)
         item = monkey[:items].shift
         processed = monkey[:operation].call(item) % @divisor
 
-        if processed % monkey[:test_by] == 0
-            @monkeys[monkey[:if_true]][:items] << processed
-        else 
+        processed % monkey[:test_by] == 0 ?
+            @monkeys[monkey[:if_true]][:items] << processed :
             @monkeys[monkey[:if_false]][:items] << processed
-        end
     end
 end
 
