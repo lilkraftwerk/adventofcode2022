@@ -8,7 +8,8 @@ def get_common_article(groups)
 end
 
 def get_priority(char)
-  return [*?a..?z, *?A..?Z].index(char)
+  return [*"a".."z", *"A".."Z"].index(char)
 end
 
-print grouped.map { get_common_article(_1) }.map { get_priority(_1) }.sum == 2507
+print grouped.map { get_common_article(_1) }.map { get_priority(_1) }.sum ==
+        2507

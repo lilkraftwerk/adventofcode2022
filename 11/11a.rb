@@ -27,11 +27,13 @@ def process_monkey(monkey)
     item = monkey[:items].shift
     processed = monkey[:operation].call(item) / 3
 
-    processed % monkey[:test_by] == 0 ?
-        @monkeys[monkey[:if_true]][:items] << processed :
-        @monkeys[monkey[:if_false]][:items] << processed
+    if processed % monkey[:test_by] == 0
+      @monkeys[monkey[:if_true]][:items] << processed
+    else
+      @monkeys[monkey[:if_false]][:items] << processed
+    end
   end
 end
 
 20.times { @monkeys.each { process_monkey(_1) } }
-puts @monkeys.map { _1[:count] }.sort.reverse.take(2).reduce(&:*) == 58056
+puts @monkeys.map { _1[:count] }.sort.reverse.take(2).reduce(&:*) == 58_056

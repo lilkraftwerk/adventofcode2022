@@ -6,9 +6,9 @@ class RockPaperScissor
   end
 
   def type
-    return :rock if ["A", "X"].include?(@char)
-    return :paper if ["B", "Y"].include?(@char)
-    return :scissors if ["C", "Z"].include?(@char)
+    return :rock if %w[A X].include?(@char)
+    return :paper if %w[B Y].include?(@char)
+    return :scissors if %w[C Z].include?(@char)
   end
 end
 
@@ -43,4 +43,4 @@ def score_match(match)
   end
 end
 
-print matches.map { |match| score_match(match) }.sum == 10718
+print matches.map { |match| score_match(match) }.sum == 10_718

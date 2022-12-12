@@ -1,17 +1,17 @@
 # adventofcode2022
 
 ```
-         * 
-        /|\                  
+         *
+        /|\
        /*|O\
       /*/|\*\
      /X/O|*\X\
     /*/X/|\X\*\
-   /O/*/X|*\O\X\             
+   /O/*/X|*\O\X\
   /*/O/X/|\X\O\*\
  /X/O/*/X|O\X\*\O\
 /O/X/*/O/|\X\*\O\X\
-        |X|      
+        |X|
         |X|
 ```
 
@@ -20,3 +20,5 @@ Answers in Ruby for Advent of Code 2022. Likely won't finish all 25 due to celeb
 In files where the end result is a boolean, like `result == 1234`, it means I found the correct answer and then hardcoded it so I could refactor against it
 
 The `01a.rb` file is the solution for the first half of the puzzle. The `01b.rb` file is a duplicate of the first half's solution, updated with the new requirements for the second part
+
+`./node_modules/.bin/prettier --write '**/*.rb'`
