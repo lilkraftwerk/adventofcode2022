@@ -16,14 +16,14 @@ Dir.mkdir(dir_path, 0700)
 code_file_path = [dir_path, "/", day.to_s, "a.rb"].join("")
 
 file_names = [
-  code_file_path,
-  [dir_path, "/", "input.txt"].join(""),
-  [dir_path, "/", "test.txt"].join("")
+    code_file_path,
+    [dir_path, "/", "input.txt"].join(""),
+    [dir_path, "/", "test.txt"].join("")
 ]
 
 file_names.each do |filename|
-  puts "Creating: #{filename}"
-  File.new(filename, File::CREAT)
+    puts "Creating: #{filename}"
+    File.new(filename, File::CREAT)
 end
 
 FileUtils.cp(template, code_file_path)
